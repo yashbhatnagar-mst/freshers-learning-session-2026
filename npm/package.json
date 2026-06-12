@@ -1,0 +1,20 @@
+{
+  "name": "starting-with-npm",
+  "version": "1.0.0",
+  "description": "this is for npm",
+  "license": "ISC",
+  "author": "mst",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-module": "node index-module.mjs",
+    "start-module-2": "node index-module-2.mjs",
+    "init": "echo hello",
+    "version": "node --version",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}

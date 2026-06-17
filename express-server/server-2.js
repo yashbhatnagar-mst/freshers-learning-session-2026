@@ -4,6 +4,8 @@ const { userData } = require("./user-data");
 const { nextObjRouter } = require("./router");
 const { globalErrorHandler } = require("./globalErrorHandler");
 const { middleware1 } = require("./nextObj");
+const { config } = require("dotenv");
+config("./.env");
 
 const app = express();
 
@@ -132,7 +134,7 @@ app.get("/health", (req, res, next) => {
 
 app.use(globalErrorHandler);
 
-const PORT = 3000;
+const PORT = process.env.PORT_URL;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
